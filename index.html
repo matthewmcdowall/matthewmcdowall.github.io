@@ -298,15 +298,6 @@
       align-items: center;
     }
 
-    .hero-greeting {
-      font-family: var(--font-mono);
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin-bottom: 12px;
-      opacity: 0;
-      animation: fade-up 0.6s 0.1s ease forwards;
-    }
-
     .hero h1 {
       font-family: var(--font-display);
       font-weight: 800;
@@ -341,16 +332,6 @@
       to { opacity: 1; transform: scaleX(1); transform-origin: left; }
     }
 
-    .hero-subtitle {
-      font-family: var(--font-mono);
-      font-size: 0.88rem;
-      color: var(--muted);
-      margin-top: 16px;
-      margin-bottom: 12px;
-      opacity: 0;
-      animation: fade-up 0.6s 0.35s ease forwards;
-    }
-
     .hero-bio {
       font-size: 1rem;
       font-weight: 600;
@@ -378,6 +359,7 @@
     .hero-tags {
       position: relative;
       height: 320px;
+      overflow: visible;
     }
 
     .hero-tag {
@@ -391,11 +373,22 @@
       white-space: nowrap;
       opacity: 0;
       animation: tag-in 0.5s ease forwards;
-      transition: transform 0.2s ease;
+      cursor: grab;
+      user-select: none;
+      touch-action: none;
+      z-index: 1;
+      transition: box-shadow 0.15s ease;
     }
 
     .hero-tag:hover {
-      transform: translateY(-4px) rotate(0deg) !important;
+      box-shadow: 6px 6px 0px var(--shadow);
+    }
+
+    .hero-tag.dragging {
+      cursor: grabbing;
+      box-shadow: 10px 10px 0px var(--shadow);
+      z-index: 10;
+      opacity: 1 !important;
     }
 
     .hero-tag:nth-child(1) { top: 10%; left: 15%; transform: rotate(-3deg); animation-delay: 0.4s; }
@@ -861,8 +854,11 @@
       }
 
       .hero-tag {
-        position: static !important;
+        position: relative !important;
         transform: none !important;
+        left: auto !important;
+        top: auto !important;
+        right: auto !important;
       }
 
       .about-grid {
@@ -1209,10 +1205,8 @@
       <div class="section-num">01</div>
       <div class="hero-grid">
         <div class="hero-left">
-          <div class="hero-greeting">Hello, I'm</div>
-          <h1>Hi, I'm <span class="underline-cyan">Matt</span></h1>
-          <p class="hero-subtitle">Building AI systems that go from concept to production.</p>
-          <p class="hero-bio">Data Science & Analytics student at UNH. Currently building RAG systems and AI-powered tools at North Light AI — turning research into real products backed by federal grants.</p>
+          <h1>Hi, I'm <span class="underline-cyan">Matthew McDowall</span></h1>
+          <p class="hero-bio">I build end-to-end AI systems that ship to production — not just demos. From RAG pipelines and LLM tooling to data infrastructure, I turn ideas into real products. <strong>Got an idea?</strong></p>
           <div class="hero-cta">
             <a href="#contact" class="btn btn-primary">Let's Talk</a>
             <a href="#projects" class="btn btn-ghost">See My Work &darr;</a>
@@ -1586,6 +1580,56 @@
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       document.documentElement.style.scrollBehavior = 'auto';
     }
+
+    // ==========================================
+    // DRAGGABLE TAGS
+    // ==========================================
+    document.querySelectorAll('.hero-tag').forEach(tag => {
+      let isDragging = false;
+      let startX, startY, origLeft, origTop;
+
+      function onPointerDown(e) {
+        isDragging = true;
+        tag.classList.add('dragging');
+        tag.style.animation = 'none';
+
+        // Get current viewport position and switch to fixed positioning
+        const rect = tag.getBoundingClientRect();
+        origLeft = rect.left;
+        origTop = rect.top;
+        startX = e.clientX;
+        startY = e.clientY;
+
+        tag.style.position = 'fixed';
+        tag.style.left = origLeft + 'px';
+        tag.style.top = origTop + 'px';
+        tag.style.right = 'auto';
+        tag.style.transform = 'none';
+        tag.style.margin = '0';
+
+        tag.setPointerCapture(e.pointerId);
+      }
+
+      function onPointerMove(e) {
+        if (!isDragging) return;
+        const dx = e.clientX - startX;
+        const dy = e.clientY - startY;
+        // Clamp to viewport edges
+        const newLeft = Math.max(0, Math.min(window.innerWidth - tag.offsetWidth, origLeft + dx));
+        const newTop = Math.max(0, Math.min(window.innerHeight - tag.offsetHeight, origTop + dy));
+        tag.style.left = newLeft + 'px';
+        tag.style.top = newTop + 'px';
+      }
+
+      function onPointerUp() {
+        isDragging = false;
+        tag.classList.remove('dragging');
+      }
+
+      tag.addEventListener('pointerdown', onPointerDown);
+      tag.addEventListener('pointermove', onPointerMove);
+      tag.addEventListener('pointerup', onPointerUp);
+    });
 
     // ==========================================
     // TERMINAL INTRO ANIMATION
