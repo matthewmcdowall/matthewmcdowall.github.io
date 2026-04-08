@@ -1,0 +1,545 @@
+{
+  "lastUpdated": "2026-04-08T03:17:43.293115+00:00",
+  "claude": {
+    "totalMessages": 11486,
+    "activeDays": 78,
+    "dailyActivity": [
+      {
+        "date": "2025-11-03",
+        "messageCount": 10,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2025-11-04",
+        "messageCount": 9,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2025-11-05",
+        "messageCount": 33,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2025-11-06",
+        "messageCount": 13,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2025-11-07",
+        "messageCount": 4,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2025-11-11",
+        "messageCount": 6,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2025-11-12",
+        "messageCount": 47,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2025-11-13",
+        "messageCount": 9,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2025-11-18",
+        "messageCount": 5,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2025-11-23",
+        "messageCount": 7,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2025-11-24",
+        "messageCount": 25,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2025-11-27",
+        "messageCount": 7,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2025-11-28",
+        "messageCount": 4,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2025-11-29",
+        "messageCount": 3,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2025-11-30",
+        "messageCount": 2,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2025-12-01",
+        "messageCount": 2,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2025-12-02",
+        "messageCount": 2,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2025-12-03",
+        "messageCount": 56,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2025-12-07",
+        "messageCount": 7,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2025-12-08",
+        "messageCount": 25,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2025-12-10",
+        "messageCount": 6,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2025-12-12",
+        "messageCount": 7,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2025-12-13",
+        "messageCount": 4,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2025-12-14",
+        "messageCount": 6,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2025-12-15",
+        "messageCount": 4,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2025-12-16",
+        "messageCount": 4,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2025-12-23",
+        "messageCount": 1,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2025-12-27",
+        "messageCount": 1,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-01-15",
+        "messageCount": 11,
+        "sessionCount": 1,
+        "toolCallCount": 1
+      },
+      {
+        "date": "2026-01-20",
+        "messageCount": 132,
+        "sessionCount": 1,
+        "toolCallCount": 22
+      },
+      {
+        "date": "2026-01-22",
+        "messageCount": 5,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-01-24",
+        "messageCount": 4285,
+        "sessionCount": 2,
+        "toolCallCount": 218
+      },
+      {
+        "date": "2026-01-26",
+        "messageCount": 22,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-01-27",
+        "messageCount": 10,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-01-28",
+        "messageCount": 10,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-01-29",
+        "messageCount": 157,
+        "sessionCount": 2,
+        "toolCallCount": 21
+      },
+      {
+        "date": "2026-01-30",
+        "messageCount": 2078,
+        "sessionCount": 3,
+        "toolCallCount": 34
+      },
+      {
+        "date": "2026-02-01",
+        "messageCount": 2,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-02-02",
+        "messageCount": 4,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-02-03",
+        "messageCount": 211,
+        "sessionCount": 5,
+        "toolCallCount": 51
+      },
+      {
+        "date": "2026-02-05",
+        "messageCount": 759,
+        "sessionCount": 7,
+        "toolCallCount": 118
+      },
+      {
+        "date": "2026-02-10",
+        "messageCount": 630,
+        "sessionCount": 2,
+        "toolCallCount": 132
+      },
+      {
+        "date": "2026-02-11",
+        "messageCount": 1670,
+        "sessionCount": 5,
+        "toolCallCount": 247
+      },
+      {
+        "date": "2026-02-12",
+        "messageCount": 109,
+        "sessionCount": 2,
+        "toolCallCount": 11
+      },
+      {
+        "date": "2026-02-15",
+        "messageCount": 161,
+        "sessionCount": 2,
+        "toolCallCount": 34
+      },
+      {
+        "date": "2026-02-16",
+        "messageCount": 305,
+        "sessionCount": 2,
+        "toolCallCount": 60
+      },
+      {
+        "date": "2026-02-17",
+        "messageCount": 109,
+        "sessionCount": 1,
+        "toolCallCount": 14
+      },
+      {
+        "date": "2026-02-19",
+        "messageCount": 1,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-02-23",
+        "messageCount": 5,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-02-24",
+        "messageCount": 1,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-02-25",
+        "messageCount": 15,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-02-26",
+        "messageCount": 1,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-02-27",
+        "messageCount": 6,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-03-01",
+        "messageCount": 9,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-03-02",
+        "messageCount": 12,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-03-03",
+        "messageCount": 1,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-03-05",
+        "messageCount": 34,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-03-07",
+        "messageCount": 4,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-03-08",
+        "messageCount": 6,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-03-09",
+        "messageCount": 27,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-03-10",
+        "messageCount": 1,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-03-11",
+        "messageCount": 1,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-03-12",
+        "messageCount": 94,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-03-15",
+        "messageCount": 22,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-03-23",
+        "messageCount": 21,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-03-24",
+        "messageCount": 13,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-03-25",
+        "messageCount": 20,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-03-26",
+        "messageCount": 57,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-03-28",
+        "messageCount": 10,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-03-29",
+        "messageCount": 7,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-03-30",
+        "messageCount": 15,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-03-31",
+        "messageCount": 10,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-04-01",
+        "messageCount": 3,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-04-02",
+        "messageCount": 19,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-04-03",
+        "messageCount": 13,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-04-05",
+        "messageCount": 7,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-04-06",
+        "messageCount": 30,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      },
+      {
+        "date": "2026-04-07",
+        "messageCount": 42,
+        "sessionCount": 0,
+        "toolCallCount": 0
+      }
+    ]
+  },
+  "github": {
+    "username": "matthewmcdowall",
+    "publicRepos": 7,
+    "followers": 0,
+    "following": 6,
+    "profileUrl": "https://github.com/matthewmcdowall",
+    "contribChartUrl": "https://ghchart.rshah.org/matthewmcdowall"
+  },
+  "spotify": {
+    "showId": "1F1rBp40lgfZfIP5lLZVaK",
+    "label": "Currently Listening"
+  },
+  "huggingface": {
+    "username": "MatthewMcDowall",
+    "numModels": 0,
+    "numDatasets": 0,
+    "numSpaces": 0,
+    "numFollowers": 0,
+    "numFollowing": 1,
+    "profileUrl": "https://huggingface.co/MatthewMcDowall"
+  },
+  "strava": {
+    "username": "matthew mcdowall",
+    "athleteId": "93790524",
+    "profileUrl": "https://www.strava.com/athletes/93790524",
+    "recentActivities": [
+      {
+        "name": "Afternoon run",
+        "type": "Run",
+        "distance": 4765.3,
+        "movingTime": 1468,
+        "date": "2026-04-04",
+        "elevation": 41.0
+      },
+      {
+        "name": "Afternoon run",
+        "type": "Run",
+        "distance": 4411.0,
+        "movingTime": 1309,
+        "date": "2026-04-01",
+        "elevation": 37.3
+      },
+      {
+        "name": "Afternoon run",
+        "type": "Run",
+        "distance": 5564.3,
+        "movingTime": 1729,
+        "date": "2026-03-28",
+        "elevation": 34.8
+      },
+      {
+        "name": "Afternoon run",
+        "type": "Run",
+        "distance": 4441.6,
+        "movingTime": 1365,
+        "date": "2026-03-24",
+        "elevation": 37.5
+      },
+      {
+        "name": "Evening run",
+        "type": "Run",
+        "distance": 4471.8,
+        "movingTime": 1476,
+        "date": "2026-03-11",
+        "elevation": 37.3
+      }
+    ]
+  }
+}
