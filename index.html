@@ -1008,8 +1008,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #0a0a0a;
-      background-image: radial-gradient(circle at 50% 50%, rgba(0, 180, 216, 0.04) 0%, transparent 60%);
+      background: var(--bg);
+      background-image: radial-gradient(circle at 50% 50%, rgba(0, 180, 216, 0.12) 0%, transparent 60%);
       transition: opacity 0.5s ease, transform 0.5s ease;
     }
 
@@ -1042,7 +1042,6 @@
       text-transform: uppercase;
       letter-spacing: 0.4em;
       color: var(--cyan);
-      opacity: 0.7;
       margin-bottom: 8px;
       opacity: 0;
       animation: t-fade 0.4s 0.1s ease forwards;
@@ -1052,10 +1051,9 @@
       font-family: var(--font-display);
       font-weight: 800;
       font-size: clamp(1.8rem, 4vw, 2.5rem);
-      color: #ffffff;
+      color: var(--text);
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      text-shadow: 0 0 20px rgba(255,255,255,0.08);
       opacity: 0;
       animation: t-fade-up 0.4s 0.2s ease forwards;
     }
@@ -1065,7 +1063,7 @@
       font-size: 0.65rem;
       text-transform: uppercase;
       letter-spacing: 0.2em;
-      color: #888;
+      color: var(--muted);
       margin-top: 6px;
       opacity: 0;
       animation: t-fade 0.4s 0.3s ease forwards;
@@ -1084,10 +1082,9 @@
     /* Terminal window chrome */
     .terminal-chrome {
       width: 100%;
-      background: #1a1a1a;
-      border: 1px solid #333;
+      background: var(--card-bg);
+      border: 2px solid var(--border);
       border-bottom: none;
-      border-radius: 12px 12px 0 0;
       padding: 10px 16px;
       display: flex;
       align-items: center;
@@ -1115,7 +1112,7 @@
       transform: translateX(-50%);
       font-family: var(--font-mono);
       font-size: 0.68rem;
-      color: #666;
+      color: var(--muted);
       text-transform: uppercase;
       letter-spacing: 0.12em;
       display: flex;
@@ -1126,16 +1123,16 @@
     .terminal-title svg {
       width: 14px;
       height: 14px;
-      stroke: #666;
+      stroke: var(--muted);
       fill: none;
     }
 
     /* Terminal body */
     .terminal-body {
       width: 100%;
-      background: #0c0c0c;
-      border: 1px solid #333;
-      border-radius: 0 0 12px 12px;
+      background: var(--card-bg);
+      border: 2px solid var(--border);
+      box-shadow: 8px 8px 0px var(--shadow);
       padding: 20px 24px;
       min-height: 240px;
       font-family: var(--font-mono);
@@ -1160,20 +1157,20 @@
     }
 
     .terminal-line .prompt {
-      color: #3b82f6;
+      color: var(--cyan);
       font-weight: 700;
       flex-shrink: 0;
     }
 
     .terminal-line .pipe {
-      color: #333;
+      color: var(--border);
       flex-shrink: 0;
     }
 
-    .terminal-line .t-cmd { color: #e5e7eb; font-weight: 600; }
-    .terminal-line .t-info { color: #8b949e; }
-    .terminal-line .t-success { color: #10b981; }
-    .terminal-line .t-highlight { color: #c084fc; }
+    .terminal-line .t-cmd { color: var(--text); font-weight: 600; }
+    .terminal-line .t-info { color: var(--muted); }
+    .terminal-line .t-success { color: var(--cyan); font-weight: 600; }
+    .terminal-line .t-highlight { color: var(--text); font-weight: 700; background: var(--yellow); padding: 0 4px; }
 
     /* Blinking cursor */
     .terminal-cursor-line {
@@ -1192,8 +1189,7 @@
     .terminal-cursor {
       width: 9px;
       height: 1.1em;
-      background: #818cf8;
-      border-radius: 1px;
+      background: var(--cyan);
       animation: cursor-blink 1s step-end infinite;
     }
 
@@ -1208,14 +1204,14 @@
       bottom: 0;
       left: 0;
       right: 0;
-      height: 3px;
-      background: #1a1a1a;
+      height: 4px;
+      background: var(--bg);
     }
 
     .terminal-progress-bar {
       height: 100%;
       width: 0%;
-      background: linear-gradient(to right, #3b82f6, #818cf8, #a855f7);
+      background: linear-gradient(to right, var(--cyan), var(--yellow));
       transition: width linear;
     }
 
@@ -1611,9 +1607,9 @@
             </div>
             <div>
               <h3>Prime Ready — NHADC</h3>
-              <p>Hybrid RAG-based matchmaking system that pairs small-to-medium suppliers with Prime contractors, replacing 5-6 weeks of manual discovery with near-instant query responses. Adopted by 50+ SMBs and NASA.</p>
+              <p>Hybrid RAG-based matchmaking system that pairs small-to-medium suppliers with Prime contractors, replacing 5-6 weeks of manual discovery with near-instant query responses. Adopted initially by 50+ SMBs and NASA.</p>
               <div class="project-tags" style="margin-top: 14px;">
-                <span class="chip chip-cyan">Python</span>
+                <span class="chip">Python</span>
                 <span class="chip">LangChain</span>
                 <span class="chip">AWS Bedrock</span>
                 <span class="chip">pgvector</span>
@@ -1627,13 +1623,14 @@
         <div class="reveal">
           <div class="card project-card">
             <h3>AI-Driven NMS Chatbot — SubCom</h3>
-            <p>Locally-hosted RAG chatbot built for SubCom's subsea cable network management systems. Uses Qwen3 via Ollama with zero external API dependencies, parses proprietary NMS docs with Docling, and serves sub-second responses via FastAPI + Streamlit.</p>
+            <p>Locally-integrated chatbot for SubCom's subsea cable Network Management System. Parses proprietary NMS documentation, embeds it into a vector database, and exposes natural-language querying through a full backend + frontend stack — fully air-gapped with zero external API calls.</p>
             <div class="project-tags">
               <span class="chip">Qwen3</span>
               <span class="chip">Ollama</span>
+              <span class="chip">Docling</span>
               <span class="chip">ChromaDB</span>
               <span class="chip">FastAPI</span>
-              <span class="chip">Docling</span>
+              <span class="chip">React</span>
             </div>
           </div>
         </div>
