@@ -39,6 +39,34 @@ def read_history():
     return daily
 
 
+def count_tokens():
+    """Walk project session JSONL files and sum token usage."""
+    projects_dir = CLAUDE_DIR / "projects"
+    total = 0
+    if not projects_dir.exists():
+        return 0
+    for session_file in projects_dir.rglob("*.jsonl"):
+        try:
+            with open(session_file) as f:
+                for line in f:
+                    try:
+                        obj = json.loads(line)
+                        if obj.get("type") != "assistant":
+                            continue
+                        usage = obj.get("message", {}).get("usage", {})
+                        total += (
+                            usage.get("input_tokens", 0)
+                            + usage.get("output_tokens", 0)
+                            + usage.get("cache_read_input_tokens", 0)
+                            + usage.get("cache_creation_input_tokens", 0)
+                        )
+                    except (json.JSONDecodeError, ValueError):
+                        continue
+        except OSError:
+            continue
+    return total
+
+
 def merge_data(stats_cache, history_counts):
     """Merge stats-cache and history data, preferring stats-cache for overlapping dates."""
     daily = {}
@@ -74,11 +102,15 @@ def main():
     history_counts = read_history()
     result = merge_data(stats_cache, history_counts)
 
+    print("Counting tokens across session files...")
+    result["totalTokens"] = count_tokens()
+
     with open(OUTPUT, "w") as f:
         json.dump(result, f, indent=2)
 
     print(f"Wrote {OUTPUT}")
     print(f"  Total messages: {result['totalMessages']}")
+    print(f"  Total tokens: {result['totalTokens']:,}")
     print(f"  Active days: {result['activeDays']}")
     print(f"  Date range: {result['dailyActivity'][0]['date']} to {result['dailyActivity'][-1]['date']}")
 

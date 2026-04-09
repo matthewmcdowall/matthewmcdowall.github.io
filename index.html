@@ -485,7 +485,8 @@
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       text-decoration: none;
       color: var(--text);
-      display: block;
+      display: flex;
+      flex-direction: column;
       position: relative;
       overflow: hidden;
     }
@@ -549,8 +550,11 @@
 
     .bento-contrib-graph {
       width: 100%;
-      margin-top: 10px;
-      overflow-x: auto;
+      margin-top: 14px;
+      overflow: hidden;
+      flex: 1;
+      display: flex;
+      align-items: center;
     }
 
     .bento-contrib-graph img {
@@ -1354,7 +1358,7 @@
         <div class="reveal">
           <h2 class="section-title">About</h2>
           <div class="about-text">
-            <p>I'm Matthew McDowall — an undergraduate student at the University of New Hampshire who builds custom, domain-specific, end-to-end AI applications. Not demos. Full systems that go from working with clients and concepts to production.</p>
+            <p>I'm Matthew McDowall — a Senior at the University of New Hampshire who builds custom, domain-specific, end-to-end AI applications. Not demos. Full systems that go from working with clients and concepts to production.</p>
             <p>Currently interning at North Light AI where I architected a supplier-matching system adopted by 50+ SMBs and NASA. I'm deep into applied AI and LLMs — and making them useful in the real world.</p>
           </div>
 
@@ -1373,14 +1377,14 @@
         <div class="bento-card">
           <div class="bento-card-header">
             <div class="bento-card-icon claude">
-              <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M4.709 15.955l4.397-2.398-.336 3.702-1.039.6c-.248.143-.329.46-.181.708l.599 1.004c.147.247.462.33.709.184l3.225-1.862 3.226 1.862c.247.146.562.063.709-.184l.599-1.004c.148-.248.067-.565-.181-.708l-1.039-.6-.336-3.702 4.397 2.398c.248.135.56.046.697-.204l.556-1.018c.136-.25.047-.563-.2-.7L16.5 12l4.011-2.033c.247-.137.336-.45.2-.7l-.556-1.018c-.137-.25-.449-.339-.697-.204l-4.397 2.398.336-3.702 1.039-.6c.248-.143.329-.46.181-.708L16.018 4.43c-.147-.247-.462-.33-.709-.184L12.084 6.11 8.858 4.246c-.247-.146-.562-.063-.709.184l-.599 1.004c-.148.248-.067.565.181.708l1.039.6.336 3.702L4.709 8.046c-.248-.135-.56-.046-.697.204l-.556 1.018c-.136.25-.047.563.2.7L7.667 12l-4.011 2.033c-.247.137-.336.45-.2.7l.556 1.018c.137.25.449.339.697.204z"/></svg>
+              <svg viewBox="0 0 24 24" fill="white" width="22" height="22"><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></svg>
             </div>
             <span class="bento-username">Claude Code</span>
           </div>
           <div class="bento-stats-row" style="gap: 20px;">
             <div style="border: 1.5px solid #E5E0D8; border-radius: 6px; padding: 8px 14px; flex: 1;">
-              <span class="bento-label">Messages</span>
-              <span class="bento-stat" style="font-size: 1.2rem;" id="claude-messages">--</span>
+              <span class="bento-label">Tokens</span>
+              <span class="bento-stat" style="font-size: 1.2rem;" id="claude-tokens">--</span>
             </div>
             <div style="border: 1.5px solid #E5E0D8; border-radius: 6px; padding: 8px 14px; flex: 1;">
               <span class="bento-label">Days</span>
@@ -1404,14 +1408,21 @@
             </div>
             <span class="bento-username">@matthewmcdowall</span>
           </div>
-          <div class="bento-stats-row">
-            <div>
-              <span class="bento-stat" id="github-repos">--</span>
-              <span class="bento-label">Public Repos</span>
+          <div class="bento-stats-row" style="gap: 20px;">
+            <div style="border: 1.5px solid #E5E0D8; border-radius: 6px; padding: 8px 14px; flex: 1;">
+              <span class="bento-label">Repos</span>
+              <span class="bento-stat" style="font-size: 1.2rem;" id="github-repos">--</span>
+            </div>
+            <div style="border: 1.5px solid #E5E0D8; border-radius: 6px; padding: 8px 14px; flex: 1;">
+              <span class="bento-label">Followers</span>
+              <span class="bento-stat" style="font-size: 1.2rem;" id="github-followers">--</span>
             </div>
           </div>
           <div class="bento-contrib-graph">
             <img src="https://ghchart.rshah.org/matthewmcdowall" alt="GitHub Contributions">
+          </div>
+          <div style="margin-top: 10px;">
+            <span style="display: inline-block; font-family: var(--font-mono); font-size: 0.7rem; padding: 4px 12px; background: #1A1A1A; color: white; border-radius: 12px;">#OpenSource</span>
           </div>
         </a>
 
@@ -1822,8 +1833,14 @@
 
         // Claude
         if (data.claude) {
-          const msgs = data.claude.totalMessages;
-          document.getElementById('claude-messages').textContent = msgs >= 1000 ? (msgs / 1000).toFixed(1) + 'K' : msgs;
+          const tokens = data.claude.totalTokens || 0;
+          function formatTokens(n) {
+            if (n >= 1e9) return (n / 1e9).toFixed(1) + 'B';
+            if (n >= 1e6) return (n / 1e6).toFixed(1) + 'M';
+            if (n >= 1e3) return (n / 1e3).toFixed(1) + 'K';
+            return n;
+          }
+          document.getElementById('claude-tokens').textContent = formatTokens(tokens);
           document.getElementById('claude-days').textContent = data.claude.activeDays;
 
           // Build heatmap from dailyActivity
@@ -1892,6 +1909,7 @@
         // GitHub
         if (data.github) {
           document.getElementById('github-repos').textContent = data.github.publicRepos;
+          document.getElementById('github-followers').textContent = data.github.followers;
         }
 
         // Spotify
