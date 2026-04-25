@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-24T08:15:22.501860+00:00",
+  "lastUpdated": "2026-04-25T07:39:29.254210+00:00",
   "claude": {
     "totalMessages": 11544,
     "activeDays": 80,
@@ -519,7 +519,7 @@
         "distance": 4395.0,
         "movingTime": 1356,
         "date": "2026-04-10",
-        "elevation": 37.9
+        "elevation": 34.9
       },
       {
         "name": "Afternoon run",
