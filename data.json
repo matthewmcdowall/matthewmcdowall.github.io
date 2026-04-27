@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-26T07:48:57.664435+00:00",
+  "lastUpdated": "2026-04-27T08:37:07.057512+00:00",
   "claude": {
     "totalMessages": 11544,
     "activeDays": 80,
@@ -516,6 +516,14 @@
       {
         "name": "Afternoon run",
         "type": "Run",
+        "distance": 4265.3,
+        "movingTime": 1258,
+        "date": "2026-04-26",
+        "elevation": 35.2
+      },
+      {
+        "name": "Afternoon run",
+        "type": "Run",
         "distance": 4395.0,
         "movingTime": 1356,
         "date": "2026-04-10",
@@ -544,14 +552,6 @@
         "movingTime": 1729,
         "date": "2026-03-28",
         "elevation": 34.8
-      },
-      {
-        "name": "Afternoon run",
-        "type": "Run",
-        "distance": 4441.6,
-        "movingTime": 1365,
-        "date": "2026-03-24",
-        "elevation": 37.5
       }
     ]
   }
