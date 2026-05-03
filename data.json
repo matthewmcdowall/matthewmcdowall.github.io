@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-02T07:53:45.040004+00:00",
+  "lastUpdated": "2026-05-03T08:08:56.708893+00:00",
   "claude": {
     "totalMessages": 11544,
     "activeDays": 80,
@@ -514,6 +514,14 @@
     "profileUrl": "https://www.strava.com/athletes/93790524",
     "recentActivities": [
       {
+        "name": "Morning run",
+        "type": "Run",
+        "distance": 4032.5,
+        "movingTime": 1274,
+        "date": "2026-05-02",
+        "elevation": 30.8
+      },
+      {
         "name": "Afternoon run",
         "type": "Run",
         "distance": 4265.3,
@@ -544,14 +552,6 @@
         "movingTime": 1309,
         "date": "2026-04-01",
         "elevation": 37.3
-      },
-      {
-        "name": "Afternoon run",
-        "type": "Run",
-        "distance": 5564.3,
-        "movingTime": 1729,
-        "date": "2026-03-28",
-        "elevation": 34.8
       }
     ]
   }
